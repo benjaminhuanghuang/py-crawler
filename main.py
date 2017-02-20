@@ -35,7 +35,7 @@ def work():
 def create_jobs():
     for link in file_to_set(QUEUE_FILE):
         queue.put(link)
-    queue.join()
+    queue.join()  # waiting for the queue to be empty
     crawl()
 
 
