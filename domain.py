@@ -16,3 +16,9 @@ def get_sub_domain_name(url):
         return urlparse(url).netloc
     except:
         return ''
+
+
+if __name__ == "__main__":
+    url = "https://mail.google.com/index.php"
+    print(get_sub_domain_name(url))
+    print(get_domain_name(url))
